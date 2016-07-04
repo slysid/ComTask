@@ -13,7 +13,7 @@ How to install Dependencies
 
 From home directory of the application run following command
 
-[sudo] pip install -r deps/requirements.txt
+[sudo] pip install -r app/deps/requirements.txt
 
 
 
