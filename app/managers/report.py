@@ -20,7 +20,7 @@ class Report(object):
         common = commons.Commons()
         templateData =  common.readYAMLFile(common.templateFileLocation)
         
-        self.logManager.logInfo(templateData)
+        self.logManager.logDebug(templateData)
         
         
         templateData['reporttime'] = datetime.datetime.now().strftime(templateData['dateformat'])
