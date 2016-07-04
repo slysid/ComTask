@@ -1,0 +1,32 @@
+AppBootStrapped:
+   message:
+     en : 'Application BootStrapped'
+     se : 'Application BootStrapped'
+TestingStarted:
+    message:
+      en: 'Started...'
+      se: 'satte igång...'
+PingingHosts:
+    message:
+      en: 'Pinging Host'
+      se: 'pinging värd'
+NoFileExists:
+   message:
+     en : 'No Such File Exists'
+     se : 'Ingen sadan fil existerar'
+GreenletJoinError:
+   message:
+     en: 'Not able to join greenlets'
+     se: 'Not able to join greenlets'
+GreenLetCompletion:
+    message:
+      en: 'Testing Completed'
+      se: 'Testing Completed'
+RenderHTML:
+    message:
+      en: 'Rendering HTML'
+      se: 'Rendering HTML'
+FileDownload:
+    message:
+      en: 'Report file can be accessed '
+      se: 'Report file can be accessed '
