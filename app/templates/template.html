@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Report</title>
+    <title>{{ templateData.title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,13 +16,32 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <h2 class="text-center">Report</h2>
+            <div class="col-md-12">
+                <h2 class="text-center">{{ templateData.title }}</h2>
+                <h6 class="text-center">{{ templateData.reporttime }}</h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h6>{{ templateData.reporttime }}</h6>
+        <div class=row>
+            <div class="col-md-4">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="failure"></td>
+                            <td>Host/Port not reachable</td>
+                        </tr>
+                        <tr>
+                            <td class="dnsalert"></td>
+                            <td>DNS resolution exceeds max time ({{ templateData.maxlimits.dns }} ms)</td>
+                        </tr>
+                        <tr>
+                            <td class="responsealert"></td>
+                            <td>Response exceeds max time ({{ templateData.maxlimits.response }} ms)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-8">
+                
             </div>
         </div>
     </div>

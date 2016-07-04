@@ -60,7 +60,10 @@ class Log(object):
         
         try:
             locale = commons.applicationConfigs['locale']
-            message = commons.messages[msgCode]['message'][locale]
+            try:
+                message = commons.messages[msgCode]['message'][locale]
+            except:
+                message = commons.messages[msgCode]['message']['en']
           
             for msg in args:
                 message = message + ' ' + str(msg)
@@ -78,7 +81,8 @@ class Log(object):
         
     def logInfo(self,msgCode, *args):
             
-          self.logger.info(self.__formalizeMessageForCode(msgCode,args))       
+          self.logger.info(self.__formalizeMessageForCode(msgCode,args))
+          
               
     def logWarn(self,msg):
         
@@ -88,6 +92,7 @@ class Log(object):
     def logError(self,msgCode, *args):
             
           self.logger.error(self.__formalizeMessageForCode(msgCode,args).upper())
+          
         
     def logCritical(self,msg):
         

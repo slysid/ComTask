@@ -7,8 +7,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         .failure { background-color: #ff0000 }
-        .dnsalert { background-color: #ff8000 }
-        .responsealert { background-color: #f5f5dc }
+        .dnsalert { background-color: #ffccb3 }
+        .responsealert { background-color: #f5f5dd }
     </style>
 </head>
 <body>
@@ -16,13 +16,32 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <h2 class="text-center">Report</h2>
+                <h6 class="text-center">04-07-2016 22:54:43</h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h6>04-07-2016 19:47:13</h6>
+        <div class=row>
+            <div class="col-md-4">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="failure"></td>
+                            <td>Host/Port not reachable</td>
+                        </tr>
+                        <tr>
+                            <td class="dnsalert"></td>
+                            <td>DNS resolution exceeds max time (30.0 ms)</td>
+                        </tr>
+                        <tr>
+                            <td class="responsealert"></td>
+                            <td>Response exceeds max time (30.0 ms)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-8">
+                
             </div>
         </div>
     </div>
@@ -49,27 +68,27 @@
                         <td>tcp</td>
                         <td>reachable</td>
                     
-                        <td>28.752</td>
+                        <td>29.766</td>
                     
                     
-                        <td class="responsealert" >50.838</td>
+                        <td class="responsealert" >45.597</td>
                     
                         <td></td>
                     </tr>
                     
                 
                     
-                        <tr>
+                        <tr class="failure">
                     
                         <td>google.com</td>
-                        <td>80</td>
+                        <td>90</td>
                         <td>tcp</td>
-                        <td>reachable</td>
+                        <td>timed out</td>
                     
-                        <td>24.106</td>
+                        <td>24.905</td>
                     
                     
-                        <td>11.105</td>
+                        <td>10.674</td>
                     
                         <td></td>
                     </tr>
@@ -83,10 +102,10 @@
                         <td>udp</td>
                         <td>reachable</td>
                     
-                        <td>18.126</td>
+                        <td>18.592</td>
                     
                     
-                        <td class="responsealert" >46.702</td>
+                        <td class="responsealert" >45.513</td>
                     
                         <td></td>
                     </tr>
@@ -103,7 +122,7 @@
                         <td>0.0</td>
                     
                     
-                        <td>9.444</td>
+                        <td>8.312</td>
                     
                         <td></td>
                     </tr>
@@ -117,10 +136,10 @@
                         <td>tcp</td>
                         <td>reachable</td>
                     
-                        <td>23.811</td>
+                        <td>24.837</td>
                     
                     
-                        <td>20.232</td>
+                        <td>9.747</td>
                     
                         <td></td>
                     </tr>
@@ -134,10 +153,10 @@
                         <td>udp</td>
                         <td>reachable</td>
                     
-                        <td>22.944</td>
+                        <td>25.102</td>
                     
                     
-                        <td class="responsealert" >55.270</td>
+                        <td class="responsealert" >53.058</td>
                     
                         <td></td>
                     </tr>
@@ -154,7 +173,7 @@
                         <td>0.0</td>
                     
                     
-                        <td>16.334</td>
+                        <td>7.922</td>
                     
                         <td></td>
                     </tr>

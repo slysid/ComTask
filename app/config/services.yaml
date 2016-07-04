@@ -2,27 +2,21 @@ services:
    google.com:
        port: 80
        protocol: tcp
-
    gmail.com:
        port: 443
        protocol: tcp
-   
    bouygues.testdebit.info:
        port: 5200
        protocol: tcp
-   
    ping.online.net:
        port: 5200
        protocol: udp
-   
    debit.k-net.fr:
        port: 5201
        protocol: udp
-   
    8.8.8.8:
        port: 53
        protocol: tcp
-   
    8.8.4.4:
        port: 53
        protocol: tcp

@@ -1,8 +1,9 @@
 dateformat: '%d-%m-%Y %H:%M:%S'
+title : 'Report'
 backgroundcolors:
      failure: '#ff0000'
-     dns: '#ff8000'
-     response: '#f5f5dc'
+     dns: '#ffccb3'
+     response: '#f5f5dd'
 maxlimits:
-    dns: 40.0
-    response: 40.0
+    dns: 30.0
+    response: 30.0
