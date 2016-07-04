@@ -20,13 +20,15 @@ class Report(object):
         common = commons.Commons()
         templateData =  common.readYAMLFile(common.templateFileLocation)
         
-        self.logManager.logDebug(templateData)
+        self.logManager.logInfo(templateData)
         
         
         templateData['reporttime'] = datetime.datetime.now().strftime(templateData['dateformat'])
+        locale = 'en'
+        if commons.applicationConfigs['locale'] == templateData['texts']['locale']:
+            locale = templateData['texts']['locale']
         
-        
-        reportHTML = self.template.render(datas=renderdata,templateData=templateData)
+        reportHTML = self.template.render(datas=renderdata,templateData=templateData,locale=locale)
         
         
         fh = open(common.reportsFileLocation,'w+')

@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ templateData.title }}</title>
+    {% set reptitle = templateData.texts.title[locale] %}
+    {% set portnotreachable = templateData.texts.portnotreach[locale] %}
+    {% set dnsmaxtime = templateData.texts.dnsmaxtime[locale] %}
+    {% set respmaxtime = templateData.texts.respmaxtime[locale] %}
+    {% set host = templateData.texts.host[locale] %}
+    {% set port = templateData.texts.port[locale] %}
+    {% set protocol = templateData.texts.protocol[locale] %}
+    {% set reachability = templateData.texts.reachability[locale] %}
+    {% set notes = templateData.texts.notes[locale] %}
+    
+    <title>{{ reptitle }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center">{{ templateData.title }}</h2>
+                <h2 class="text-center">{{ reptitle }}</h2>
                 <h6 class="text-center">{{ templateData.reporttime }}</h6>
             </div>
         </div>
@@ -27,15 +37,15 @@
                     <tbody>
                         <tr>
                             <td class="failure"></td>
-                            <td>Host/Port not reachable</td>
+                            <td>{{ portnotreachable }}</td>
                         </tr>
                         <tr>
                             <td class="dnsalert"></td>
-                            <td>DNS resolution exceeds max time ({{ templateData.maxlimits.dns }} ms)</td>
+                            <td>{{ dnsmaxtime }} ({{ templateData.maxlimits.dns }} ms)</td>
                         </tr>
                         <tr>
                             <td class="responsealert"></td>
-                            <td>Response exceeds max time ({{ templateData.maxlimits.response }} ms)</td>
+                            <td> {{ respmaxtime }} ({{ templateData.maxlimits.response }} ms)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -49,13 +59,13 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Host</th>
-                    <th>Port</th>
-                    <th>Protocol</th>
-                    <th>Reachability</th>
+                    <th>{{ host }}</th>
+                    <th>{{ port }}</th>
+                    <th>{{ protocol }}</th>
+                    <th>{{ reachability }}</th>
                     <th>Avg.DNS Response(ms)</th>
                     <th>Avg.Response(ms)</th>
-                    <th>Notes</th>
+                    <th>{{ notes }}</th>
                 </tr>
             </thead>
             <tbody>

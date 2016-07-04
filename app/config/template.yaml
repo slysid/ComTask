@@ -1,9 +1,37 @@
 dateformat: '%d-%m-%Y %H:%M:%S'
-title : 'Report'
+maxlimits:
+    dns: 30.0
+    response: 30.0
 backgroundcolors:
      failure: '#ff0000'
      dns: '#ffccb3'
      response: '#f5f5dd'
-maxlimits:
-    dns: 30.0
-    response: 30.0
+texts:
+   locale : 'en'
+   title : 
+      en: 'Report'
+      se: 'Rapportera'
+   portnotreach:
+      en : 'Host/Port not reachable'
+      se : 'Vard/Port inte nas'
+   dnsmaxtime:
+       en : 'DNS Resolution exceeds max time '
+       se : 'DNS-upplosning overskrider max tid'
+   respmaxtime:
+       en : 'Response exceeded max time'
+       se : 'Svar oversteg max tid'
+   host:
+       en : 'Host'
+       se : 'Vard'
+   port:
+       en : 'Port'
+       se : 'Port'
+   protocol:
+       en : 'Protocol'
+       se : 'Protokoll'
+   reachability:
+       en : 'Reachability'
+       se : 'Nabarhet'
+   notes:
+       en : 'Notes'
+       se : 'Anmarkningar'
