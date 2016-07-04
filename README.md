@@ -24,4 +24,4 @@ From home directory of the application run the following command
 
 python main.py
 
-The application generates reports/report.html once execution is completed
+The application generates a HTML report in reports/report.html once execution is completed and the path of the file is printed out after execution
