@@ -1,3 +1,7 @@
+*** IMPORTANT ***
+
+The application is tested ton OS X and Linux
+
 Dependencies
 ------------
 
