@@ -13,7 +13,7 @@ import report
 import sys
 
 
-class Pinger(object):
+class Network(object):
      
      def __init__(self, ):
           
@@ -35,7 +35,7 @@ class Pinger(object):
           if protocol.lower() in socketTypes:
                return socketTypes[protocol.lower()]
           else:
-               return sockerTypes('tcp')
+               return socketTypes('tcp')
      
      
      def __portCheckReachability(self,host,port,protocol):

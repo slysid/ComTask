@@ -2,7 +2,7 @@
 
 from commons import Commons
 from log import Log
-from pinger import Pinger
+from network import Network
 from report import Report
 
 appliation = Commons()
