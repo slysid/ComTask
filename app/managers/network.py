@@ -238,6 +238,7 @@ class Network(object):
           self.logManager.logDebug(consolidateData)
           self.logManager.logDebug('**************')
           
-          self.__renderHTML(consolidateData)
+          #self.__renderHTML(consolidateData)
+          return consolidateData
           
           

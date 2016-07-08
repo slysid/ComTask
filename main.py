@@ -8,7 +8,7 @@ class Main(object):
         self.commonManager = Managers.Commons()
         self.logManager = Managers.Log(__name__)
         self.networkManager = Managers.Network()
-        self.repotManager = Managers.Report()
+        self.reportManager = Managers.Report()
         
         self.services = {}
     
@@ -21,14 +21,22 @@ class Main(object):
     
     def __networkTest(self):
         
-        self.networkManager.ping(self.services)
+        return self.networkManager.ping(self.services)
+        
+        
+    
+    def __renderHTML(self,renderdata):
+          
+          self.logManager.logInfo('Rendering HTML')
+          self.reportManager.renderHTMLFile(renderdata)
     
     def startTesting(self):
         
         self.logManager.logInfo('TestingStarted')
         
         self.__getServices()
-        self.__networkTest()
+        #self.__networkTest()
+        self.__renderHTML(self.__networkTest())
 
 
 if __name__ == '__main__':
